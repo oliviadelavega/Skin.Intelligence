@@ -1,8 +1,6 @@
-  ---                                                                                                                                                                                                          
-  ---                                                                                                                                                                                                          
-  <!DOCTYPE html>
+  <!DOCTYPE html>                                                                                                                                                                                              
   <html lang="en">                                                                                                                                                                                             
-  <head>          
+  <head>                                                                                                                                                                                                       
   <meta charset="UTF-8">                                                                                                                                                                                       
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="If eczema or atopic dermatitis has shaped your life — we're building something for you.">                                                                                  
@@ -21,17 +19,17 @@
       --dim:     #524840;                                                                                                                                                                                      
       --red:     #b85050;                                                                                                                                                                                      
     }                                                                                                                                                                                                          
-                                                                                                                                                                                                               
+                  
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }                                                                                                                                  
     html { scroll-behavior: smooth; }
     body {                                                                                                                                                                                                     
       background: var(--bg);
-      color: var(--text);
+      color: var(--text);                                                                                                                                                                                      
       font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;                                                                                                                              
       font-size: 16px;                                                                                                                                                                                         
       line-height: 1.6;                                                                                                                                                                                        
       min-height: 100vh;                                                                                                                                                                                       
-      -webkit-font-smoothing: antialiased;
+      -webkit-font-smoothing: antialiased;                                                                                                                                                                     
     }                                                                                                                                                                                                          
    
     body::before {                                                                                                                                                                                             
@@ -41,24 +39,24 @@
    stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");                                                                          
       pointer-events: none;                                                                                                                                                                                    
       opacity: .4;                                                                                                                                                                                             
-    }             
-
-    .wrap {
-      position: relative; z-index: 1;
-      max-width: 680px;
-      margin: 0 auto;                                                                                                                                                                                          
-      padding: 0 28px;                                                                                                                                                                                         
     }                                                                                                                                                                                                          
-                                                                                                                                                                                                               
-    header {      
+   
+    .wrap {                                                                                                                                                                                                    
+      position: relative; z-index: 1;
+      max-width: 680px;                                                                                                                                                                                        
+      margin: 0 auto;                                                                                                                                                                                          
+      padding: 0 28px;
+    }                                                                                                                                                                                                          
+                  
+    header {                                                                                                                                                                                                   
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       padding: 24px 32px;                                                                                                                                                                                      
       display: flex; justify-content: space-between; align-items: center;
     }                                                                                                                                                                                                          
-    .header-tag {                                                                                                                                                                                              
-      font-size: 11px; letter-spacing: .16em;
-      text-transform: uppercase; color: var(--dim);                                                                                                                                                            
-    }             
+    .header-tag { 
+      font-size: 11px; letter-spacing: .16em;                                                                                                                                                                  
+      text-transform: uppercase; color: var(--dim);
+    }                                                                                                                                                                                                          
                                                                                                                                                                                                                
     #landing { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 120px 0 80px; }                                                                                     
                                                                                                                                                                                                                
@@ -71,66 +69,66 @@
     .eyebrow::before {
       content: '';                                                                                                                                                                                             
       display: block; width: 24px; height: 1px;
-      background: var(--accent);
-    }                                                                                                                                                                                                          
-   
-    h1 {                                                                                                                                                                                                       
+      background: var(--accent);                                                                                                                                                                               
+    }
+                                                                                                                                                                                                               
+    h1 {          
       font-size: clamp(38px, 7vw, 68px);
-      font-weight: 300;
-      letter-spacing: -.03em;                                                                                                                                                                                  
-      line-height: 1.05;
+      font-weight: 300;                                                                                                                                                                                        
+      letter-spacing: -.03em;
+      line-height: 1.05;                                                                                                                                                                                       
       margin-bottom: 28px;                                                                                                                                                                                     
       color: var(--text);
     }                                                                                                                                                                                                          
     h1 em { font-style: normal; color: var(--accent2); }
                                                                                                                                                                                                                
-    .sub {                                                                                                                                                                                                     
+    .sub {
       font-size: clamp(16px, 2.5vw, 19px);                                                                                                                                                                     
-      color: var(--muted);                                                                                                                                                                                     
+      color: var(--muted);
       max-width: 520px;                                                                                                                                                                                        
-      line-height: 1.65;                                                                                                                                                                                       
+      line-height: 1.65;
       margin-bottom: 52px;                                                                                                                                                                                     
-      font-weight: 300;                                                                                                                                                                                        
+      font-weight: 300;
     }                                                                                                                                                                                                          
     .sub strong { color: var(--text); font-weight: 400; }
                                                                                                                                                                                                                
     .form-wrap {                                                                                                                                                                                               
       display: flex; gap: 10px; flex-wrap: wrap;
       margin-bottom: 20px;                                                                                                                                                                                     
-    }             
-    .form-wrap input[type="email"] {
+    }                                                                                                                                                                                                          
+    .form-wrap input[type="email"] {                                                                                                                                                                           
       flex: 1; min-width: 220px;                                                                                                                                                                               
-      background: var(--s1);                                                                                                                                                                                   
+      background: var(--s1);
       border: 1px solid var(--border2);                                                                                                                                                                        
-      border-radius: 10px;                                                                                                                                                                                     
-      padding: 14px 18px;
+      border-radius: 10px;
+      padding: 14px 18px;                                                                                                                                                                                      
       font-size: 15px;                                                                                                                                                                                         
-      color: var(--text);
+      color: var(--text);                                                                                                                                                                                      
       outline: none;                                                                                                                                                                                           
-      transition: border-color .2s, box-shadow .2s;
+      transition: border-color .2s, box-shadow .2s;                                                                                                                                                            
       font-family: inherit;                                                                                                                                                                                    
-    }             
+    }
     .form-wrap input[type="email"]::placeholder { color: var(--dim); }                                                                                                                                         
-    .form-wrap input[type="email"]:focus {
+    .form-wrap input[type="email"]:focus {                                                                                                                                                                     
       border-color: var(--accent);                                                                                                                                                                             
       box-shadow: 0 0 0 3px rgba(201,122,78,.12);                                                                                                                                                              
     }                                                                                                                                                                                                          
-    .btn {                                                                                                                                                                                                     
+    .btn {        
       background: var(--accent);                                                                                                                                                                               
-      color: #0a0806;
+      color: #0a0806;                                                                                                                                                                                          
       border: none; border-radius: 10px;                                                                                                                                                                       
-      padding: 14px 26px;
+      padding: 14px 26px;                                                                                                                                                                                      
       font-size: 14px; font-weight: 600;                                                                                                                                                                       
       letter-spacing: .04em;                                                                                                                                                                                   
-      cursor: pointer;
-      transition: background .2s, transform .1s;                                                                                                                                                               
+      cursor: pointer;                                                                                                                                                                                         
+      transition: background .2s, transform .1s;
       font-family: inherit;                                                                                                                                                                                    
       white-space: nowrap;
     }                                                                                                                                                                                                          
-    .btn:hover { background: var(--accent2); }
+    .btn:hover { background: var(--accent2); }                                                                                                                                                                 
     .btn:active { transform: scale(.98); }                                                                                                                                                                     
     .btn:disabled { opacity: .5; cursor: not-allowed; }                                                                                                                                                        
-                                                                                                                                                                                                               
+                  
     .form-note { font-size: 12px; color: var(--dim); margin-top: 12px; }                                                                                                                                       
     .error-msg { font-size: 12px; color: var(--red); margin-top: 8px; display: none; }
                                                                                                                                                                                                                
@@ -141,12 +139,12 @@
     }                                                                                                                                                                                                          
     .resonators-label {
       font-size: 11px; letter-spacing: .18em;                                                                                                                                                                  
-      text-transform: uppercase; color: var(--dim);
+      text-transform: uppercase; color: var(--dim);                                                                                                                                                            
       margin-bottom: 40px;                                                                                                                                                                                     
     }                                                                                                                                                                                                          
-    .resonator {
+    .resonator {  
       padding: 24px 0;                                                                                                                                                                                         
-      border-bottom: 1px solid var(--border);                                                                                                                                                                  
+      border-bottom: 1px solid var(--border);
       display: flex; gap: 20px; align-items: flex-start;                                                                                                                                                       
     }                                                                                                                                                                                                          
     .resonator:last-child { border-bottom: none; }                                                                                                                                                             
@@ -155,13 +153,13 @@
     .r-text strong { color: var(--text); font-weight: 400; }                                                                                                                                                   
                                                                                                                                                                                                                
     .mystery {                                                                                                                                                                                                 
-      background: var(--s1);                                                                                                                                                                                   
+      background: var(--s1);
       border: 1px solid var(--border);                                                                                                                                                                         
       border-radius: 16px;                                                                                                                                                                                     
       padding: 48px 40px;                                                                                                                                                                                      
       margin: 40px 0 80px;                                                                                                                                                                                     
-      text-align: center;                                                                                                                                                                                      
-    }             
+      text-align: center;
+    }                                                                                                                                                                                                          
     .mystery-tag {                                                                                                                                                                                             
       display: inline-block;
       background: var(--bg); border: 1px solid var(--border2);                                                                                                                                                 
@@ -176,39 +174,39 @@
     footer {                                                                                                                                                                                                   
       border-top: 1px solid var(--border);                                                                                                                                                                     
       padding: 32px 0;                                                                                                                                                                                         
-      display: flex; justify-content: space-between; align-items: center;                                                                                                                                      
+      display: flex; justify-content: space-between; align-items: center;
       flex-wrap: wrap; gap: 12px;                                                                                                                                                                              
-    }                                                                                                                                                                                                          
+    }             
     .footer-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--dim); }                                                                                                                       
     .footer-text { font-size: 12px; color: var(--dim); }                                                                                                                                                       
                                                                                                                                                                                                                
     #success { display: none; min-height: 100vh; flex-direction: column; justify-content: center; padding: 120px 0 80px; }                                                                                     
     #success.visible { display: flex; }                                                                                                                                                                        
                                                                                                                                                                                                                
-    .success-eyebrow {
-      font-size: 11px; letter-spacing: .2em;
+    .success-eyebrow {                                                                                                                                                                                         
+      font-size: 11px; letter-spacing: .2em;                                                                                                                                                                   
       text-transform: uppercase; color: var(--accent);                                                                                                                                                         
       margin-bottom: 32px;
-      display: flex; align-items: center; gap: 10px;                                                                                                                                                           
-    }             
+      display: flex; align-items: center; gap: 10px;
+    }                                                                                                                                                                                                          
     .success-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--accent); }
                                                                                                                                                                                                                
     .success-head { font-size: clamp(32px, 6vw, 56px); font-weight: 300; letter-spacing: -.025em; line-height: 1.1; margin-bottom: 16px; }                                                                     
     .success-sub { font-size: 16px; color: var(--muted); margin-bottom: 52px; font-weight: 300; line-height: 1.65; }                                                                                           
                                                                                                                                                                                                                
-    .position-badge {
+    .position-badge {                                                                                                                                                                                          
       display: inline-flex; align-items: center; gap: 12px;                                                                                                                                                    
       background: var(--s1); border: 1px solid var(--border2);                                                                                                                                                 
-      border-radius: 12px; padding: 14px 20px;
+      border-radius: 12px; padding: 14px 20px;                                                                                                                                                                 
       margin-bottom: 40px;                                                                                                                                                                                     
-    }             
+    }                                                                                                                                                                                                          
     .position-num { font-size: 22px; font-weight: 300; color: var(--accent2); letter-spacing: -.02em; }                                                                                                        
     .position-lbl { font-size: 12px; color: var(--muted); }                                                                                                                                                    
                                                                                                                                                                                                                
     .ref-box { background: var(--s1); border: 1px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 32px; }                                                                              
     .ref-box-head { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 6px; }                                                                                                               
     .ref-box-sub { font-size: 13px; color: var(--muted); margin-bottom: 20px; }                                                                                                                                
-    .ref-link-row { display: flex; gap: 8px; align-items: center; }
+    .ref-link-row { display: flex; gap: 8px; align-items: center; }                                                                                                                                            
     .ref-link-input {                                                                                                                                                                                          
       flex: 1; background: var(--bg);                                                                                                                                                                          
       border: 1px solid var(--border); border-radius: 8px;                                                                                                                                                     
@@ -217,14 +215,14 @@
       outline: none; cursor: default;                                                                                                                                                                          
       overflow: hidden; text-overflow: ellipsis; white-space: nowrap;                                                                                                                                          
     }                                                                                                                                                                                                          
-    .copy-btn {   
+    .copy-btn {                                                                                                                                                                                                
       background: none; border: 1px solid var(--border2);                                                                                                                                                      
       border-radius: 8px; padding: 10px 16px;                                                                                                                                                                  
       font-size: 12px; font-weight: 500;
       color: var(--text); cursor: pointer;                                                                                                                                                                     
-      transition: all .2s; white-space: nowrap;                                                                                                                                                                
+      transition: all .2s; white-space: nowrap;
       font-family: inherit;                                                                                                                                                                                    
-    }                                                                                                                                                                                                          
+    }             
     .copy-btn:hover { background: var(--border); border-color: var(--accent); }                                                                                                                                
     .copy-btn.copied { color: var(--accent); border-color: var(--accent); }                                                                                                                                    
                                                                                                                                                                                                                
@@ -232,14 +230,14 @@
     .share-btn {                                                                                                                                                                                               
       display: flex; align-items: center; gap: 7px;                                                                                                                                                            
       background: none; border: 1px solid var(--border);                                                                                                                                                       
-      border-radius: 8px; padding: 8px 14px;                                                                                                                                                                   
+      border-radius: 8px; padding: 8px 14px;
       font-size: 12px; color: var(--muted);                                                                                                                                                                    
       cursor: pointer; transition: all .15s;                                                                                                                                                                   
       font-family: inherit; text-decoration: none;                                                                                                                                                             
     }                                                                                                                                                                                                          
-    .share-btn:hover { border-color: var(--border2); color: var(--text); }                                                                                                                                     
+    .share-btn:hover { border-color: var(--border2); color: var(--text); }
                                                                                                                                                                                                                
-    .tiers { margin-top: 8px; }                                                                                                                                                                                
+    .tiers { margin-top: 8px; }
     .tier-label { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--dim); margin-bottom: 16px; }                                                                                 
     .tier { display: flex; align-items: center; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--border); transition: opacity .2s; }                                                                 
     .tier:last-child { border-bottom: none; }                                                                                                                                                                  
@@ -247,10 +245,10 @@
     .tier-icon {                                                                                                                                                                                               
       width: 28px; height: 28px; border-radius: 50%;
       display: flex; align-items: center; justify-content: center;                                                                                                                                             
-      font-size: 13px; flex-shrink: 0;
-      border: 1px solid var(--border); background: var(--bg); color: var(--dim);                                                                                                                               
-    }             
-    .tier.active .tier-icon { background: rgba(201,122,78,.15); border-color: var(--accent); color: var(--accent); }                                                                                           
+      font-size: 13px; flex-shrink: 0;                                                                                                                                                                         
+      border: 1px solid var(--border); background: var(--bg); color: var(--dim);
+    }                                                                                                                                                                                                          
+    .tier.active .tier-icon { background: rgba(201,122,78,.15); border-color: var(--accent); color: var(--accent); }
     .tier.done .tier-icon { background: rgba(90,154,106,.15); border-color: #5a9a6a; color: #5a9a6a; }                                                                                                         
     .tier-body { flex: 1; }                                                                                                                                                                                    
     .tier-name { font-size: 14px; font-weight: 500; color: var(--text); }                                                                                                                                      
@@ -259,9 +257,9 @@
     .tier-req {                                                                                                                                                                                                
       font-size: 11px; color: var(--dim);                                                                                                                                                                      
       background: var(--s1); border: 1px solid var(--border);                                                                                                                                                  
-      border-radius: 20px; padding: 3px 10px; white-space: nowrap;
+      border-radius: 20px; padding: 3px 10px; white-space: nowrap;                                                                                                                                             
     }                                                                                                                                                                                                          
-    .tier.active .tier-req { color: var(--accent); border-color: var(--border2); }
+    .tier.active .tier-req { color: var(--accent); border-color: var(--border2); }                                                                                                                             
                                                                                                                                                                                                                
     @keyframes pulse {
       0%, 100% { opacity: 1; box-shadow: 0 0 12px var(--accent); }                                                                                                                                             
@@ -269,43 +267,43 @@
     }                                                                                                                                                                                                          
     @keyframes fadeUp {                                                                                                                                                                                        
       from { opacity: 0; transform: translateY(16px); }                                                                                                                                                        
-      to   { opacity: 1; transform: translateY(0); }                                                                                                                                                           
+      to   { opacity: 1; transform: translateY(0); }
     }                                                                                                                                                                                                          
-    .fade-up    { animation: fadeUp .6s ease forwards; }                                                                                                                                                       
+    .fade-up    { animation: fadeUp .6s ease forwards; }
     .fade-up-d1 { animation: fadeUp .6s .1s ease both; }                                                                                                                                                       
     .fade-up-d2 { animation: fadeUp .6s .2s ease both; }                                                                                                                                                       
     .fade-up-d3 { animation: fadeUp .6s .3s ease both; }                                                                                                                                                       
     .fade-up-d4 { animation: fadeUp .6s .4s ease both; }                                                                                                                                                       
     .fade-up-d5 { animation: fadeUp .6s .5s ease both; }                                                                                                                                                       
-                                                                                                                                                                                                               
+                  
     @media (max-width: 520px) {                                                                                                                                                                                
-      header { padding: 20px; }                                                                                                                                                                                
+      header { padding: 20px; }
       .form-wrap { flex-direction: column; }                                                                                                                                                                   
-      .form-wrap input[type="email"] { min-width: 0; }                                                                                                                                                         
+      .form-wrap input[type="email"] { min-width: 0; }
       .btn { width: 100%; text-align: center; }                                                                                                                                                                
-      .mystery { padding: 32px 24px; }                                                                                                                                                                         
+      .mystery { padding: 32px 24px; }
       .ref-box { padding: 20px; }                                                                                                                                                                              
       .position-badge { margin-bottom: 28px; }
       footer { flex-direction: column; align-items: flex-start; }                                                                                                                                              
-    }             
+    }                                                                                                                                                                                                          
   </style>                                                                                                                                                                                                     
-  </head>         
-  <body>                                                                                                                                                                                                       
-  
+  </head>                                                                                                                                                                                                      
+  <body>          
+                                                                                                                                                                                                               
   <header>                                                                                                                                                                                                     
-    <div style="display:flex;align-items:center;gap:8px;">
+    <div style="display:flex;align-items:center;gap:8px;">                                                                                                                                                     
       <span style="font-size:22px;line-height:1;">🤫</span>                                                                                                                                                    
       <span style="font-size:12px;letter-spacing:.18em;color:var(--dim);">Shhh</span>                                                                                                                          
     </div>                                                                                                                                                                                                     
     <div class="header-tag">Early Access</div>                                                                                                                                                                 
   </header>                                                                                                                                                                                                    
                   
-  <!-- LANDING STATE -->
+  <!-- LANDING STATE -->                                                                                                                                                                                       
   <div id="landing">
     <div class="wrap">                                                                                                                                                                                         
-                                                                                                                                                                                                               
+                  
       <div class="eyebrow fade-up">For those who don't know why their skin is flaring up</div>                                                                                                                 
-                                                                                                                                                                                                               
+  
       <h1 class="fade-up-d1">                                                                                                                                                                                  
         We're building<br>
         <em>Skin Intelligence.</em>                                                                                                                                                                            
@@ -322,16 +320,16 @@
       <div class="fade-up-d3">                                                                                                                                                                                 
         <form class="form-wrap" id="wl-form" novalidate>
           <input type="email" id="email-input" placeholder="your@email.com" autocomplete="email" required />                                                                                                   
-          <button type="submit" class="btn" id="submit-btn">Get early access</button>
+          <button type="submit" class="btn" id="submit-btn">Get early access</button>                                                                                                                          
         </form>                                                                                                                                                                                                
-        <div class="error-msg" id="error-msg">Please enter a valid email address.</div>
+        <div class="error-msg" id="error-msg">Please enter a valid email address.</div>                                                                                                                        
         <div class="form-note">Free to join. No spam. Ever.</div>                                                                                                                                              
       </div>                                                                                                                                                                                                   
                                                                                                                                                                                                                
       <div class="resonators fade-up-d4">                                                                                                                                                                      
         <div class="resonators-label">This is for you if —</div>
         <div class="resonator">                                                                                                                                                                                
-          <div class="r-num">01</div>                                                                                                                                                                          
+          <div class="r-num">01</div>
           <div class="r-text">You've kept a <strong>mental log of everything</strong> — every meal, every product, every stressful week — searching for a pattern your doctor never looked for.</div>          
         </div>                                                                                                                                                                                                 
         <div class="resonator">                                                                                                                                                                                
@@ -340,16 +338,16 @@
         </div>                                                                                                                                                                                                 
         <div class="resonator">                                                                                                                                                                                
           <div class="r-num">03</div>                                                                                                                                                                          
-          <div class="r-text">You've been handed <strong>the same cortisone cream</strong> for the tenth time, told to moisturise, and left the appointment knowing nothing new.</div>                         
+          <div class="r-text">You've been handed <strong>the same cortisone cream</strong> for the tenth time, told to moisturise, and left the appointment knowing nothing new.</div>
         </div>                                                                                                                                                                                                 
-        <div class="resonator">                                                                                                                                                                                
+        <div class="resonator">
           <div class="r-num">04</div>                                                                                                                                                                          
-          <div class="r-text">You have a feeling — almost an instinct — that <strong>something is building before a flare</strong>. Your body knows. You just can't prove it. Yet.</div>                       
+          <div class="r-text">You have a feeling — almost an instinct — that <strong>something is building before a flare</strong>. Your body knows. You just can't prove it. Yet.</div>
         </div>                                                                                                                                                                                                 
       </div>                                                                                                                                                                                                   
                                                                                                                                                                                                                
       <div class="mystery fade-up-d5">                                                                                                                                                                         
-        <div class="mystery-tag">In development</div>                                                                                                                                                          
+        <div class="mystery-tag">In development</div>
         <h2>We're not another skincare app.</h2>                                                                                                                                                               
         <p>We're building the thing that should have existed a decade ago. Something that listens to your body the way you've always wanted a doctor to. Be first to know when we're ready.</p>                
       </div>                                                                                                                                                                                                   
@@ -361,8 +359,8 @@
       </footer>                                                                                                                                                                                                
                                                                                                                                                                                                                
     </div>                                                                                                                                                                                                     
-  </div>                                                                                                                                                                                                       
-                  
+  </div>          
+
   <!-- SUCCESS STATE -->                                                                                                                                                                                       
   <div id="success">
     <div class="wrap">                                                                                                                                                                                         
@@ -373,15 +371,15 @@
                                                                                                                                                                                                                
       <div class="position-badge fade-up-d2">                                                                                                                                                                  
         <div>                                                                                                                                                                                                  
-          <div class="position-num">#<span id="position-num">—</span></div>                                                                                                                                    
+          <div class="position-num">#<span id="position-num">—</span></div>
           <div class="position-lbl">on the waitlist</div>                                                                                                                                                      
-        </div>                                                                                                                                                                                                 
+        </div>
         <div style="width:1px;height:36px;background:var(--border);"></div>                                                                                                                                    
-        <div>                                                                                                                                                                                                  
+        <div>     
           <div class="position-num" id="ref-count-display">0</div>                                                                                                                                             
-          <div class="position-lbl">referrals</div>                                                                                                                                                            
+          <div class="position-lbl">referrals</div>
         </div>                                                                                                                                                                                                 
-      </div>                                                                                                                                                                                                   
+      </div>      
                                                                                                                                                                                                                
       <div class="ref-box fade-up-d3">
         <div class="ref-box-head">Your referral link</div>
@@ -410,23 +408,23 @@
             Email                                                                                                                                                                                              
           </a>                                                                                                                                                                                                 
         </div>    
-      </div>                                                                                                                                                                                                   
-  
+      </div>
+
       <div class="fade-up-d4">                                                                                                                                                                                 
         <div class="tier-label">Move up the list</div>
         <div class="tiers" id="tiers">                                                                                                                                                                         
-          <div class="tier done" id="tier-0">                                                                                                                                                                  
+          <div class="tier done" id="tier-0">
             <div class="tier-icon">✓</div>                                                                                                                                                                     
-            <div class="tier-body">                                                                                                                                                                            
+            <div class="tier-body">
               <div class="tier-name">On the waitlist</div>                                                                                                                                                     
               <div class="tier-desc">You're in. We'll reach out when we're ready.</div>                                                                                                                        
             </div>                                                                                                                                                                                             
             <div class="tier-req">Joined</div>                                                                                                                                                                 
           </div>                                                                                                                                                                                               
-          <div class="tier locked" id="tier-1">                                                                                                                                                                
+          <div class="tier locked" id="tier-1">
             <div class="tier-icon">→</div>                                                                                                                                                                     
             <div class="tier-body">                                                                                                                                                                            
-              <div class="tier-name">First mover</div>                                                                                                                                                         
+              <div class="tier-name">First mover</div>
               <div class="tier-desc">Skip 25 spots on the waitlist.</div>                                                                                                                                      
             </div>                                                                                                                                                                                             
             <div class="tier-req">1 referral</div>
@@ -435,27 +433,27 @@
             <div class="tier-icon">⬆</div>                                                                                                                                                                     
             <div class="tier-body">
               <div class="tier-name">Guaranteed early access</div>                                                                                                                                             
-              <div class="tier-desc">Among the first 500 to receive the product.</div>
+              <div class="tier-desc">Among the first 500 to receive the product.</div>                                                                                                                         
             </div>                                                                                                                                                                                             
-            <div class="tier-req">3 referrals</div>
+            <div class="tier-req">3 referrals</div>                                                                                                                                                            
           </div>                                                                                                                                                                                               
           <div class="tier locked" id="tier-5">
             <div class="tier-icon">★</div>                                                                                                                                                                     
-            <div class="tier-body">
-              <div class="tier-name">Founding Member</div>
+            <div class="tier-body">                                                                                                                                                                            
+              <div class="tier-name">Founding Member</div>                                                                                                                                                     
               <div class="tier-desc">Locked pricing forever. Direct line to the founders. Co-design input.</div>                                                                                               
             </div>                                                                                                                                                                                             
             <div class="tier-req">5 referrals</div>                                                                                                                                                            
           </div>                                                                                                                                                                                               
-        </div>                                                                                                                                                                                                 
+        </div>    
       </div>                                                                                                                                                                                                   
                   
       <footer style="margin-top:60px;">                                                                                                                                                                        
         <div class="footer-dot"></div>
         <div class="footer-text">Built for people with eczema. By people who understand.</div>                                                                                                                 
-        <div class="footer-text" style="color:var(--border2);">© 2026</div>
+        <div class="footer-text" style="color:var(--border2);">© 2026</div>                                                                                                                                    
       </footer>                                                                                                                                                                                                
-   
+                                                                                                                                                                                                               
     </div>                                                                                                                                                                                                     
   </div>          
 
@@ -471,9 +469,9 @@
                                                                                                                                                                                                                
   function genPosition(code) {                                                                                                                                                                                 
     let h = 0;    
-    for (let i = 0; i < code.length; i++) h = Math.imul(31, h) + code.charCodeAt(i) | 0;                                                                                                                       
+    for (let i = 0; i < code.length; i++) h = Math.imul(31, h) + code.charCodeAt(i) | 0;
     return 300 + Math.abs(h % 900);                                                                                                                                                                            
-  }                                                                                                                                                                                                            
+  }
                                                                                                                                                                                                                
   function getRefParam() {                                                                                                                                                                                     
     return new URLSearchParams(window.location.search).get('ref');
@@ -482,9 +480,9 @@
   function showSuccess(code, refCount) {                                                                                                                                                                       
     const refLink = `${BASE_URL}?ref=${code}`;
     const pos     = genPosition(code);                                                                                                                                                                         
-                  
+                                                                                                                                                                                                               
     document.getElementById('position-num').textContent      = (pos - (refCount * 25)).toLocaleString();                                                                                                       
-    document.getElementById('ref-count-display').textContent  = refCount;
+    document.getElementById('ref-count-display').textContent  = refCount;                                                                                                                                      
     document.getElementById('ref-link-input').value           = refLink;                                                                                                                                       
                                                                                                                                                                                                                
     const msg = encodeURIComponent("If eczema has shaped your life, you need to see what's being built 👀 " + refLink);                                                                                        
@@ -497,12 +495,12 @@
     document.getElementById('landing').style.display = 'none';                                                                                                                                                 
     document.getElementById('success').classList.add('visible');
     window.scrollTo({ top: 0, behavior: 'smooth' });                                                                                                                                                           
-  }                                                                                                                                                                                                            
+  }               
                                                                                                                                                                                                                
   function updateTiers(refs) {                                                                                                                                                                                 
     const t1 = document.getElementById('tier-1');
     const t3 = document.getElementById('tier-3');                                                                                                                                                              
-    const t5 = document.getElementById('tier-5');                                                                                                                                                              
+    const t5 = document.getElementById('tier-5');
                                                                                                                                                                                                                
     if (refs >= 1) { t1.classList.remove('locked'); t1.classList.add('done'); t1.querySelector('.tier-icon').textContent = '✓'; }                                                                              
     if (refs >= 3) { t3.classList.remove('locked'); t3.classList.add('done'); t3.querySelector('.tier-icon').textContent = '✓'; }                                                                              
@@ -512,7 +510,7 @@
     if (refs === 1 || refs === 2) { t3.classList.add('active'); t3.classList.remove('locked'); }                                                                                                               
     if (refs === 3 || refs === 4) { t5.classList.add('active'); t5.classList.remove('locked'); }                                                                                                               
   }                                                                                                                                                                                                            
-                                                                                                                                                                                                               
+  
   function copyLink() {                                                                                                                                                                                        
     const val = document.getElementById('ref-link-input').value;
     navigator.clipboard.writeText(val).then(() => {                                                                                                                                                            
@@ -520,37 +518,37 @@
       btn.textContent = 'Copied!';                                                                                                                                                                             
       btn.classList.add('copied');                                                                                                                                                                             
       setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);                                                                                                                   
-    });
+    });                                                                                                                                                                                                        
   }                                                                                                                                                                                                            
-                  
+                                                                                                                                                                                                               
   document.getElementById('wl-form').addEventListener('submit', function(e) {                                                                                                                                  
     e.preventDefault();
     const emailEl   = document.getElementById('email-input');                                                                                                                                                  
     const errorEl   = document.getElementById('error-msg');                                                                                                                                                    
-    const submitBtn = document.getElementById('submit-btn');                                                                                                                                                   
+    const submitBtn = document.getElementById('submit-btn');
     const email     = emailEl.value.trim();                                                                                                                                                                    
                                                                                                                                                                                                                
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {                                                                                                                                                           
-      errorEl.style.display = 'block';
+      errorEl.style.display = 'block';                                                                                                                                                                         
       emailEl.focus();                                                                                                                                                                                         
-      return;                                                                                                                                                                                                  
-    }
-    errorEl.style.display = 'none';                                                                                                                                                                            
+      return;     
+    }                                                                                                                                                                                                          
+    errorEl.style.display = 'none';
     submitBtn.disabled    = true;
-    submitBtn.textContent = 'Joining...';                                                                                                                                                                      
+    submitBtn.textContent = 'Joining...';
                                                                                                                                                                                                                
     fetch('https://formspree.io/f/xreydqnl', {                                                                                                                                                                 
       method: 'POST',                                                                                                                                                                                          
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },                                                                                                                           
       body: JSON.stringify({ email, ref: getRefParam() || '' })                                                                                                                                                
-    }).catch(() => {});
+    }).catch(() => {}); // fire and forget — show success regardless                                                                                                                                           
                                                                                                                                                                                                                
-    setTimeout(() => {
+    setTimeout(() => {                                                                                                                                                                                         
       let code = localStorage.getItem('wl_code') || genCode();                                                                                                                                                 
       let refs = parseInt(localStorage.getItem('wl_refs') || '0', 10);                                                                                                                                         
-      localStorage.setItem('wl_email', email);                                                                                                                                                                 
+      localStorage.setItem('wl_email', email);
       localStorage.setItem('wl_code', code);                                                                                                                                                                   
-      localStorage.setItem('wl_refs', refs);                                                                                                                                                                   
+      localStorage.setItem('wl_refs', refs);
       if (getRefParam()) localStorage.setItem('wl_referred_by', getRefParam());                                                                                                                                
       showSuccess(code, refs);                                                                                                                                                                                 
     }, 900);
@@ -558,11 +556,11 @@
                   
   window.addEventListener('DOMContentLoaded', () => {                                                                                                                                                          
     const code = localStorage.getItem('wl_code');
-    const refs = parseInt(localStorage.getItem('wl_refs') || '0', 10);                                                                                                                                         
+    const refs = parseInt(localStorage.getItem('wl_refs') || '0', 10);
     if (code) showSuccess(code, refs);                                                                                                                                                                         
-  });                                                                                                                                                                                                          
+  });
   </script>                                                                                                                                                                                                    
                   
   </body>
   </html>
-
+  
