@@ -1,229 +1,32 @@
-  ---                                                                                                                                                                                                          
-  layout: null                                                                                                                                                                                                 
-  ---                                                                                                                                                                                                          
-  <!DOCTYPE html> 
-  <html lang="en">
-  <head>                                                                                                                                                                                                       
+  <!DOCTYPE html>                                     
+  <html lang="en">                                                                                                                                                                                             
+  <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">                                                                                                                                       
-  <meta name="description" content="If eczema or atopic dermatitis has shaped your life — we're building something for you.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="If eczema or atopic dermatitis has shaped your life — we're building something for you.">                                                                                  
   <title>Something is coming.</title>                                                                                                                                                                          
-  <style>
-    :root {                                                                                                                                                                                                    
-      --bg:      #080706;
-      --s1:      #0f0e0c;                                                                                                                                                                                      
-      --s2:      #161410;                                                                                                                                                                                      
-      --border:  #252015;                                                                                                                                                                                      
-      --border2: #342c1e;                                                                                                                                                                                      
-      --accent:  #c97a4e;                                                                                                                                                                                      
-      --accent2: #e8a86a;
-      --text:    #ede8e1;                                                                                                                                                                                      
-      --muted:   #88796a;                                                                                                                                                                                      
-      --dim:     #524840;                                                                                                                                                                                      
-      --red:     #b85050;                                                                                                                                                                                      
-    }             
-                                                                                                                                                                                                               
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }                                                                                                                                  
-    html { scroll-behavior: smooth; }
-    body {                                                                                                                                                                                                     
-      background: var(--bg);                                                                                                                                                                                   
-      color: var(--text);
-      font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;                                                                                                                              
-      font-size: 16px;                                                                                                                                                                                         
-      line-height: 1.6;
-      min-height: 100vh;                                                                                                                                                                                       
-      -webkit-font-smoothing: antialiased;
-    }
-                                                                                                                                                                                                               
-    body::before {
-      content: '';                                                                                                                                                                                             
-      position: fixed; inset: 0; z-index: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'
-   stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");                                                                          
-      pointer-events: none;
-      opacity: .4;                                                                                                                                                                                             
-    }             
-
-    .wrap {                                                                                                                                                                                                    
-      position: relative; z-index: 1;
-      max-width: 680px;                                                                                                                                                                                        
-      margin: 0 auto;
-      padding: 0 28px;
-    }                                                                                                                                                                                                          
-   
-    header {                                                                                                                                                                                                   
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      padding: 24px 32px;
-      display: flex; justify-content: space-between; align-items: center;                                                                                                                                      
-    }
-    .header-tag {                                                                                                                                                                                              
-      font-size: 11px; letter-spacing: .16em;
-      text-transform: uppercase; color: var(--dim);                                                                                                                                                            
-    }             
-                                                                                                                                                                                                               
-    #landing { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 120px 0 80px; }                                                                                     
-   
-    .eyebrow {                                                                                                                                                                                                 
-      font-size: 11px; letter-spacing: .2em;
-      text-transform: uppercase; color: var(--accent);
-      margin-bottom: 32px;                                                                                                                                                                                     
-      display: flex; align-items: center; gap: 10px;
-    }                                                                                                                                                                                                          
-    .eyebrow::before {
-      content: '';                                                                                                                                                                                             
-      display: block; width: 24px; height: 1px;
-      background: var(--accent);                                                                                                                                                                               
-    }             
-
-    h1 {
-      font-size: clamp(38px, 7vw, 68px);
-      font-weight: 300;                                                                                                                                                                                        
-      letter-spacing: -.03em;
-      line-height: 1.05;                                                                                                                                                                                       
-      margin-bottom: 28px;
-      color: var(--text);                                                                                                                                                                                      
-    }                                                                                                                                                                                                          
-    h1 em { font-style: normal; color: var(--accent2); }
-                                                                                                                                                                                                               
-    .sub {        
-      font-size: clamp(16px, 2.5vw, 19px);                                                                                                                                                                     
-      color: var(--muted);
-      max-width: 520px;                                                                                                                                                                                        
-      line-height: 1.65;
-      margin-bottom: 52px;                                                                                                                                                                                     
-      font-weight: 300;
-    }                                                                                                                                                                                                          
-    .sub strong { color: var(--text); font-weight: 400; }
-                                                                                                                                                                                                               
-    .form-wrap {                                                                                                                                                                                               
-      display: flex; gap: 10px; flex-wrap: wrap;
-      margin-bottom: 20px;                                                                                                                                                                                     
-    }             
-    .form-wrap input[type="email"] {
-      flex: 1; min-width: 220px;                                                                                                                                                                               
-      background: var(--s1);
-      border: 1px solid var(--border2);                                                                                                                                                                        
-      border-radius: 10px;                                                                                                                                                                                     
-      padding: 14px 18px;
-      font-size: 15px;                                                                                                                                                                                         
-      color: var(--text);                                                                                                                                                                                      
-      outline: none;
-      transition: border-color .2s, box-shadow .2s;                                                                                                                                                            
-      font-family: inherit;
-    }                                                                                                                                                                                                          
-    .form-wrap input[type="email"]::placeholder { color: var(--dim); }
-    .form-wrap input[type="email"]:focus {                                                                                                                                                                     
-      border-color: var(--accent);                                                                                                                                                                             
-      box-shadow: 0 0 0 3px rgba(201,122,78,.12);
-    }                                                                                                                                                                                                          
-    .btn {        
-      background: var(--accent);                                                                                                                                                                               
-      color: #0a0806;
-      border: none; border-radius: 10px;                                                                                                                                                                       
-      padding: 14px 26px;
-      font-size: 14px; font-weight: 600;                                                                                                                                                                       
-      letter-spacing: .04em;                                                                                                                                                                                   
-      cursor: pointer;
-      transition: background .2s, transform .1s;                                                                                                                                                               
-      font-family: inherit;                                                                                                                                                                                    
-      white-space: nowrap;
-    }                                                                                                                                                                                                          
-    .btn:hover { background: var(--accent2); }
-    .btn:active { transform: scale(.98); }
-    .btn:disabled { opacity: .5; cursor: not-allowed; }                                                                                                                                                        
-   
-    .form-note { font-size: 12px; color: var(--dim); margin-top: 12px; }                                                                                                                                       
-    .error-msg { font-size: 12px; color: var(--red); margin-top: 8px; display: none; }
-                                                                                                                                                                                                               
-    .resonators { 
-      margin: 80px 0;
-      border-top: 1px solid var(--border);                                                                                                                                                                     
-      padding-top: 64px;
-    }                                                                                                                                                                                                          
-    .resonators-label {
-      font-size: 11px; letter-spacing: .18em;                                                                                                                                                                  
-      text-transform: uppercase; color: var(--dim);
-      margin-bottom: 40px;                                                                                                                                                                                     
-    }                                                                                                                                                                                                          
-    .resonator {
-      padding: 24px 0;                                                                                                                                                                                         
-      border-bottom: 1px solid var(--border);
-      display: flex; gap: 20px; align-items: flex-start;                                                                                                                                                       
-    }
-    .resonator:last-child { border-bottom: none; }                                                                                                                                                             
-    .r-num { font-size: 11px; color: var(--dim); padding-top: 3px; min-width: 20px; }                                                                                                                          
-    .r-text { font-size: clamp(16px, 2.5vw, 18px); color: var(--muted); font-weight: 300; line-height: 1.55; }                                                                                                 
-    .r-text strong { color: var(--text); font-weight: 400; }                                                                                                                                                   
-                                                                                                                                                                                                               
-    .mystery {                                                                                                                                                                                                 
-      background: var(--s1);                                                                                                                                                                                   
-      border: 1px solid var(--border);
-      border-radius: 16px;                                                                                                                                                                                     
-      padding: 48px 40px;
-      margin: 40px 0 80px;                                                                                                                                                                                     
-      text-align: center;                                                                                                                                                                                      
-    }
-    .mystery-tag {                                                                                                                                                                                             
-      display: inline-block;
-      background: var(--bg); border: 1px solid var(--border2);
-      border-radius: 20px; padding: 4px 14px;                                                                                                                                                                  
-      font-size: 11px; letter-spacing: .14em;                                                                                                                                                                  
-      text-transform: uppercase; color: var(--dim);                                                                                                                                                            
-      margin-bottom: 24px;                                                                                                                                                                                     
-    }                                                                                                                                                                                                          
-    .mystery h2 { font-size: clamp(22px, 4vw, 32px); font-weight: 300; letter-spacing: -.02em; margin-bottom: 16px; color: var(--text); }
-    .mystery p { font-size: 15px; color: var(--muted); max-width: 440px; margin: 0 auto; line-height: 1.7; }                                                                                                   
-                                                                                                                                                                                                               
-    footer {                                                                                                                                                                                                   
-      border-top: 1px solid var(--border);                                                                                                                                                                     
-      padding: 32px 0;
-      display: flex; justify-content: space-between; align-items: center;
-      flex-wrap: wrap; gap: 12px;                                                                                                                                                                              
-    }
-    .footer-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--dim); }                                                                                                                       
-    .footer-text { font-size: 12px; color: var(--dim); }                                                                                                                                                       
-   
-    @keyframes fadeUp {                                                                                                                                                                                        
-      from { opacity: 0; transform: translateY(16px); }
-      to   { opacity: 1; transform: translateY(0); }                                                                                                                                                           
-    }             
-    .fade-up    { animation: fadeUp .6s ease forwards; }                                                                                                                                                       
-    .fade-up-d1 { animation: fadeUp .6s .1s ease both; }
-    .fade-up-d2 { animation: fadeUp .6s .2s ease both; }                                                                                                                                                       
-    .fade-up-d3 { animation: fadeUp .6s .3s ease both; }                                                                                                                                                       
-    .fade-up-d4 { animation: fadeUp .6s .4s ease both; }                                                                                                                                                       
-    .fade-up-d5 { animation: fadeUp .6s .5s ease both; }                                                                                                                                                       
-                                                                                                                                                                                                               
-    @media (max-width: 520px) {
-      header { padding: 20px; }                                                                                                                                                                                
-      .form-wrap { flex-direction: column; }                                                                                                                                                                   
-      .form-wrap input[type="email"] { min-width: 0; }
-      .btn { width: 100%; text-align: center; }                                                                                                                                                                
-      .mystery { padding: 32px 24px; }                                                                                                                                                                         
-      footer { flex-direction: column; align-items: flex-start; }
-    }                                                                                                                                                                                                          
-  </style>        
+  <link rel="stylesheet" href="style.css">                                                                                                                                                                     
   </head>                                                                                                                                                                                                      
-  <body>          
+  <body>                                                                                                                                                                                                       
 
-  <header>
+  <header>                                                                                                                                                                                                     
     <div style="display:flex;align-items:center;gap:8px;">
       <span style="font-size:22px;line-height:1;">🤫</span>                                                                                                                                                    
-      <span style="font-size:12px;letter-spacing:.18em;color:var(--dim);">Shhh</span>                                                                                                                          
+      <span style="font-size:12px;letter-spacing:.18em;color:var(--dim);">Shhh</span>
     </div>                                                                                                                                                                                                     
-    <div class="header-tag">Early Access</div>                                                                                                                                                                 
+    <div class="header-tag">Early Access</div>        
   </header>                                                                                                                                                                                                    
-                  
+                                                      
   <div id="landing">                                                                                                                                                                                           
     <div class="wrap">
 
       <div class="eyebrow fade-up">For those who don't know why their skin is flaring up</div>                                                                                                                 
-   
+                                                      
       <h1 class="fade-up-d1">                                                                                                                                                                                  
-        We're building<br>
+        We're building<br>                            
         <em>Skin Intelligence.</em>                                                                                                                                                                            
-      </h1>
-                                                                                                                                                                                                               
+      </h1>                                                                                                                                                                                                    
+                                                      
       <p class="sub fade-up-d2">                                                                                                                                                                               
         If you have <strong>eczema, atopic dermatitis, or chronic itch</strong> —
         if your skin has been controlling your sleep, your choices, your life —                                                                                                                                
@@ -238,32 +41,32 @@
           <button type="submit" class="btn" id="submit-btn">Get early access</button>                                                                                                                          
         </form>                                                                                                                                                                                                
         <div class="error-msg" id="error-msg">Please enter a valid email address.</div>                                                                                                                        
-        <div class="form-note">Free to join. No spam. Ever.</div>
+        <div class="form-note">Free to join. No spam. Ever.</div>                                                                                                                                              
       </div>                                                                                                                                                                                                   
-                  
+                                                                                                                                                                                                               
       <div class="resonators fade-up-d4">                                                                                                                                                                      
         <div class="resonators-label">This is for you if —</div>
         <div class="resonator">                                                                                                                                                                                
-          <div class="r-num">01</div>
+          <div class="r-num">01</div>                 
           <div class="r-text">You've kept a <strong>mental log of everything</strong> — every meal, every product, every stressful week — searching for a pattern your doctor never looked for.</div>          
         </div>                                                                                                                                                                                                 
-        <div class="resonator">
+        <div class="resonator">                                                                                                                                                                                
           <div class="r-num">02</div>                                                                                                                                                                          
           <div class="r-text">You've woken up at <strong>3am having already scratched</strong>, without knowing when it started or why tonight was the night.</div>
         </div>                                                                                                                                                                                                 
-        <div class="resonator">
+        <div class="resonator">                       
           <div class="r-num">03</div>                                                                                                                                                                          
           <div class="r-text">You've been handed <strong>the same cortisone cream</strong> for the tenth time, told to moisturise, and left the appointment knowing nothing new.</div>
         </div>                                                                                                                                                                                                 
-        <div class="resonator">
+        <div class="resonator">                                                                                                                                                                                
           <div class="r-num">04</div>                                                                                                                                                                          
-          <div class="r-text">You have a feeling — almost an instinct — that <strong>something is building before a flare</strong>. Your body knows. You just can't prove it. Yet.</div>
+          <div class="r-text">You have a feeling — almost an instinct — that <strong>something is building before a flare</strong>. Your body knows. You just can't prove it. Yet.</div>                       
         </div>                                                                                                                                                                                                 
-      </div>
+      </div>                                          
                                                                                                                                                                                                                
-      <div class="mystery fade-up-d5">
-        <div class="mystery-tag">In development</div>                                                                                                                                                          
-        <h2>We're not another skincare app.</h2>
+      <div class="mystery fade-up-d5">                                                                                                                                                                         
+        <div class="mystery-tag">In development</div> 
+        <h2>We're not another skincare app.</h2>                                                                                                                                                               
         <p>We're building the thing that should have existed a decade ago. Something that listens to your body the way you've always wanted a doctor to. Be first to know when we're ready.</p>                
       </div>                                                                                                                                                                                                   
                                                                                                                                                                                                                
@@ -274,30 +77,30 @@
       </footer>                                                                                                                                                                                                
                                                                                                                                                                                                                
     </div>                                                                                                                                                                                                     
-  </div>          
+  </div>
 
   <script>
   document.getElementById('wl-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+    e.preventDefault();                                                                                                                                                                                        
     const emailEl   = document.getElementById('email-input');
     const errorEl   = document.getElementById('error-msg');                                                                                                                                                    
     const submitBtn = document.getElementById('submit-btn');
     const email     = emailEl.value.trim();                                                                                                                                                                    
-                  
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {                                                                                                                                                           
-      errorEl.style.display = 'block';
-      emailEl.focus();                                                                                                                                                                                         
-      return;     
-    }
-
+                                                                                                                                                                                                               
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {  
+      errorEl.style.display = 'block';                                                                                                                                                                         
+      emailEl.focus();
+      return;                                                                                                                                                                                                  
+    }                                                 
+                                                                                                                                                                                                               
     errorEl.style.display = 'none';
     submitBtn.disabled    = true;
-    submitBtn.textContent = 'Taking you there...';                                                                                                                                                             
-   
-    const typeformUrl = 'https://xa1jorh6vh4.typeform.com/to/lR0KsMRS#email=' + encodeURIComponent(email);                                                                                                     
-    setTimeout(() => { window.location.href = typeformUrl; }, 600);
-  });                                                                                                                                                                                                          
-  </script>       
+    submitBtn.textContent = 'Taking you there...';
                                                                                                                                                                                                                
-  </body>         
-  </html>
+    const typeformUrl = 'https://xa1jorh6vh4.typeform.com/to/lR0KsMRS#email=' + encodeURIComponent(email);                                                                                                     
+    setTimeout(() => { window.location.href = typeformUrl; }, 600);                                                                                                                                            
+  });                                                                                                                                                                                                          
+  </script>
+                                                                                                                                                                                                               
+  </body>                                             
+  </html>       
